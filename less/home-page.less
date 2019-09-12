@@ -1,21 +1,47 @@
 .home {
 
+  .about{
+    margin: 0 auto;
+    border-bottom: 2px dashed silver;
+    h2{
+      padding-top: 2%;
+    }
+    @media @mobile{
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
+    @media @mobile{
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      width: 80%;
+      margin: 20px auto;
+    }
    
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @mobile{
+        width:100%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+      @media @mobile{
+        width:100%;
+      }
 
       img {
         border-radius: 10px;
@@ -26,7 +52,13 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
-
+    @media @mobile{
+      flex-direction: column-reverse;
+      justify-content: center;
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
     .text-content {
       padding-left: 1%;
       padding-right: 0;
@@ -45,6 +77,9 @@
     img {
       border-radius: 10px;
     }
+    @media @mobile{
+      margin-top: 20px;
+    }
   }
 
   .content-pick {
@@ -52,10 +87,54 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    @media @mobile{
+      flex-direction: column;
+      align-items: center;
+      width: 80%;
+      margin: 0 auto;
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      .btn{
+        .custom-btn(teal, 80%, white);
+      }
+      @media @mobile{
+        display: flex;
+        flex-direction: column;
+        width:100%;
+      }
     }
   }
 }// home
+
+.contact{
+  width:80%;
+  margin: 0 auto;
+
+  h2{
+    font-size: 40px;
+    padding-top: 2%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .form{
+    margin: 0 auto;
+    width: 80%;
+    max-width: 800px;
+    input[type=text], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+    }
+    input[type=submit] {
+      .custom-btn(teal, 300px, white);
+      margin-bottom: 2%;
+    }
+  }
+}
