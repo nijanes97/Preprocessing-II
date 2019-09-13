@@ -1,1 +1,40 @@
 // Navigation Styles here
+
+header{
+    border-bottom: 2px dashed silver;
+    margin: 0 auto;
+    padding: 1%;
+    .content{
+        display: flex;
+        justify-content: space-between;
+        max-width: 800px;
+        align-items: center;
+        margin: 0 auto;
+        padding: 2%;
+        @media @mobile {
+            flex-direction: column;
+        }
+        nav{
+            display: flex;
+            justify-content: flex-end;
+            width: 69%;
+            font-size: 15px;
+            @media @mobile{
+                justify-content: center;
+                width:100%;
+            }
+            a{
+                text-decoration: none;
+                font-family: 'Roboto', sans-serif;
+                margin-right: 5%;
+                color: @shark;
+                &:hover{
+                    color:silver;
+                }
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
